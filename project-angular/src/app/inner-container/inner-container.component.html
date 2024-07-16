@@ -1,0 +1,51 @@
+<div class="content">
+  <div class="header_h1">
+    <h1>Nagłówek H1</h1>
+    <div class="bloks">
+      <div class="blok_1">
+        BLOK PIERWSZY
+        <div class="radio-group">
+          <label class="radio-container">
+            <input type="radio" name="option1" [(ngModel)]="selectedOption1" value="option1">
+            <span class="custom-radio"></span>
+            Opcja pierwsza
+          </label>
+          <label class="radio-container">
+            <input type="radio" name="option1" [(ngModel)]="selectedOption1" value="option2">
+            <span class="custom-radio"></span>
+            Opcja druga
+          </label>
+          <label class="radio-container">
+            <input type="radio" name="option1" [(ngModel)]="selectedOption1" value="option3">
+            <span class="custom-radio"></span>
+            Opcja losowa
+          </label>
+          <!--Opcja pierwsza-->
+          <!--<input type="radio" name="option1" [(ngModel)]="selectedOption1" value="option2"> Opcja druga
+          <input type="radio" name="option1" [(ngModel)]="selectedOption1" value="option3"> Opcja losowa-->
+        </div>
+      </div>
+      <div class="blok_2">
+        <p>BLOK DRUGI</p>
+        <div class="buttons">
+          <button (click)="onButtonClickReplace()" class="primary-button">
+            <span class="primary-button__text">
+              ZASTĄP
+            </span>
+          </button>
+          <button (click)="onButtonClickAdd()" class="primary-button">
+            <span class="primary-button__text">
+              DOKLEJ
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="blok_3">
+        <p>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE ...</p>
+        <div>
+          {{sumSotrTable()}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

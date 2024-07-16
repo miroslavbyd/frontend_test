@@ -1,0 +1,257 @@
+$color-1: #2f2f2f;
+$color-2: #080808;
+$color-3: #1d1c1c;
+$color-4: #eb940b;
+$color-5: #ffffff;
+$color-6: #000000;
+body {
+  background-color: $color-1;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  min-height: 7rem;
+  width: 100%;
+  margin: 0;
+  background-color: $color-2;
+  height: 7rem;
+  color: $color-5;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+
+  .header-content {
+    width: 100%;
+    display: flex;
+
+    .logo-html5 {
+      flex: 1 1 65%;
+    }
+
+    .text {
+      flex: 1 1 35%;
+      position: relative;
+      float: right;
+      margin: 1rem
+    }
+
+    .html5-button {
+      width: 3rem;
+      height: 3rem;
+      position: relative;
+      align-content: center;
+      text-align: center;
+      text-decoration: none;
+      background-color: $color-1;
+      border-radius: 50%;
+      border-color: none;
+      border-style: none;
+      margin: 1rem;
+      padding: 1rem 1rem;
+
+      &:hover {
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        text-decoration: none;
+        background-color: $color-4;
+        border-radius: 50%;
+        border-color: none;
+        margin: 1rem;
+        padding: 1rem 1rem;
+        font-size: 3.4rem;
+      }
+    }
+
+    .fa-html5 {
+      font-size: 3rem;
+      color: $color-5;
+      padding: 1rem 1rem;
+    }
+  }
+}
+
+.css-button {
+  left: 1rem;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-style: none;
+  border-width: 0;
+  color: $color-4;
+  background-color: $color-3;
+  border-color: $color-3;
+  display: flex;
+
+  &::before {
+    color: $color-5;
+    display: block;
+    content: "";
+    position: absolute;
+  }
+
+  .primary-button__text2 {
+    position: relative;
+    color: $color-1;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    font-size: .8rem;
+    word-break: normal;
+
+    &:hover {
+      color: $color-5;
+    }
+  }
+}
+
+.frame::before {
+  bottom: -0.3rem;
+  left: -0.3rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0.3rem solid $color-1;
+  transition: all 0.5s ease-out;
+  color: $color-5;
+}
+
+.frame:hover::before {
+  border: 0.3rem solid $color-4;
+  transform: rotate(360deg);
+  transition: all 0.5s ease-in;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $color-3;
+  color: white;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.css-section {
+  flex: 1 1 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+  left: 2rem;
+}
+.center-section {
+  flex: 1 1 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+  align-self: center;
+  text-align: center;
+  color: $color-1;
+}
+
+.menu-section {
+  flex: 1 1 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+  //background-color: #9e1500;
+  position: relative;
+}
+
+#menuToggle {
+  display: none;
+}
+
+#menuButton {
+  text-decoration: none;
+  background-color: $color-3;
+  border-style: solid;
+  border-color: $color-1;
+  border-width: 1px;
+  border-radius: 5px;
+  color: $color-5;
+  padding: .5rem .5rem;
+  width: 10em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  position: relative;
+
+  &::after {
+    content: '\1433'; 
+    margin-left: 1rem;
+    transition: transform 0.3s ease; 
+    transform: rotate(270deg);
+   
+  }
+}
+
+#menuToggle:checked + #menuButton{
+  border-color: $color-5;
+  color: $color-5;
+
+  &::after {
+    transform: rotate(90deg);
+    border-color: $color-5;
+    color: $color-5;
+  }
+}
+
+.footer-menu {
+  position: absolute;
+  bottom: 4.7rem;
+  width: 11em;
+  background-color: $color-5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+
+    li {
+      padding: .2rem 1rem;
+
+      button {
+        color: $color-6;
+        font-size: .8rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        position: relative;
+        padding: 0;
+        border-style: none;
+        background: $color-5;
+
+        &::before {
+          content: '\1433';
+          font-size: .8rem;
+          margin-right: 2rem;
+          position: absolute;
+          left: -1rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:hover {
+          color: $color-4;
+        }
+      }
+    }
+  }
+}
+
+
+
+#menuToggle:checked + #menuButton + .footer-menu {
+  max-height: 20rem;
+}

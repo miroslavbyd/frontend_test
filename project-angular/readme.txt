@@ -1,0 +1,13 @@
+- Pociołem strone wedłóg przykładu.
+- W Hederze stworzyłem przycisk z logem html5(jako grafiki użyłem tczionki) który przekerowuje do '/'.
+- Stopka jest przyklejona do dołu strony.
+- Dodałem funkcjonalności do radiobutonów i przycisków 'ZASTĄP' ,'DOKLEJ'. Początkowa i dodatkowa treść jest pobierana z pliku data_texts.json.
+- Wyświetlane treści są oddzielone ','.
+- Dodawane treści są sprawdzane pod kątem ich występowania.
+- Przycisk POKAŻ wysuwa menu z pod footera, w którym są przyciski do resetowania wprowadzonych zmian oraz do wyświetlania imienia i nazwiska.
+- Projekt jest zbudowany w Angular.
+- Projekt nie zawiera plików graficznych.
+- Po najechaniy na przycisk CSS IS AWESOME sama ramka zaczyna się obracać.
+- Doklejana treść jest zawsze posortowana.
+- Jeżeli po 50 razach algorytm nie wylosuje unikalnej treści wyświetlany jest odpowiedni komunikat.
+- Wysuwana ramka jest zrobiona z wykorzystaniem samego css.

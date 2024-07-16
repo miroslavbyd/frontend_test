@@ -1,0 +1,138 @@
+$color-1: #2f2f2f;
+$color-2: #080808;
+$color-3: #2c2c2c;
+$color-4: #eb940b;
+$color-5: #ffffff;
+/*main {
+  margin: 0;
+    background-color: $color-1;
+  color: $color-5;
+}*/
+
+h1 {
+  text-align: center;
+  color: $color-5;
+}
+
+.bloks {
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  color: $color-5;
+}
+@media (max-width: 950px) {
+  .blok_1 {
+    flex: 1 1 50%;
+  }
+
+  .blok_2 {
+    flex: 1 1 50%;
+  }
+
+  .blok_3 {
+    flex-basis: 100%;
+  }
+
+  .blok_2 .primary-button {
+    display: grid;
+  }
+  .bloks {
+    flex-wrap: wrap;
+  }
+}
+
+.blok_1 {
+  flex: 1 1 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Ukryj domyślne przyciski radiowe */
+input[type="radio"] {
+  display: none;
+}
+
+.radio-group {
+  display: grid;
+  gap: 0.5rem; 
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.custom-radio {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border: 2px solid $color-5;
+  border-radius: 1rem;
+  position: relative;
+  margin-right: 1rem;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-radio::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: $color-5;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+input[type="radio"]:checked + .custom-radio::after {
+  opacity: 1;
+}
+
+.blok_2 {
+  flex: 1 1 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+  div {
+    .primary-button {
+      text-decoration: none;
+      background-color: $color-1;
+      border-style: solid;
+      border-color: $color-5;
+      border-width: 1px;
+      border-radius: 5px;
+      padding: .5rem .5rem;
+      margin: 1rem;
+      width: 7rem;
+      &:hover {
+        background-color: $color-4;
+      }
+
+      .primary-button__text {
+        text-align: center;
+        text-decoration: none;
+        color: $color-5;
+      }
+    }
+  }
+}
+.blok_3 {
+  flex: 1 1 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.radio {
+  background-color: #ff6a00;
+}
